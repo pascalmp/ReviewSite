@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${selectedReview.title}" ></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+    <p th:text="${selectedReview.id}" />
+    <p th:text="'Review of ' + ${selectedReview.title}" />
+    <p th:text="'By ' +${selectedReview.author}" />
+    <p th:text="${selectedReview.content}" />
+    <p th:text="${selectedReview.date}" />
+    
+    
+</body>
+</html>
