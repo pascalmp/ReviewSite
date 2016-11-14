@@ -1,5 +1,6 @@
 package review;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,8 +37,7 @@ public class ReviewRepository {
     	
     }
 	
-	public Map<Long, Review> findAll() {
-		// TODO Auto-generated method stub
-		return reviewById;
+	public Collection<Review> findAll() {
+		return reviewById.values();
 	}
 }

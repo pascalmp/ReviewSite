@@ -1,5 +1,6 @@
 package review;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 
@@ -23,8 +24,8 @@ public class ReviewController {
 	@RequestMapping("/all")
 	public String displayAll(Model model){
 		
-		Map<Long, Review> reviewMap = repository.findAll();
-		model.addAttribute("reviews", reviewMap);
+		Collection<Review> reviews = repository.findAll();
+		model.addAttribute("reviews", reviews);
 		
 	    return "review-all";
 		

@@ -11,14 +11,19 @@
     <ol>
        <div th:each="review : ${reviews}">
           <li>
-            <p th:text="${review.value.title}"></p>
+            <a th:href="@{'review?id=' + ${review.id}}">
+            <p th:text="${review.title}"></p>
+            </a>
           </li>
        
        </div>
-    
-    
-    
     </ol>
+    
+    <h2>With divs:</h2>
+    <div th:each="review : ${reviews}" class="reviewEntry">
+            <a th:href="@{/review(id=${review.id})}" th:text="${review.title}" />
+    
+    </div>
 
 
    <!--   <p th:text="${selectedReview.id}" />
