@@ -5,8 +5,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
-
+@Component
 public class ReviewRepository {
 	
 	private Map<Long, Review> reviewById;
